@@ -46,7 +46,7 @@ export class College {
   @Column({ nullable: true })
   website: string;
 
-  @Column({ type: 'boolean', default: true })
+  @Column({  default: true,nullable: true })
   status: boolean;
 
   @Column({ type: 'bigint', default: 1 })

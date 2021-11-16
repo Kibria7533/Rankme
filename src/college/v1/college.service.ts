@@ -52,9 +52,7 @@ export class CollegeService {
 
   async getCollege(query) : Promise<College[]>{
        const queryBuilder = this.collegeRepo.createQueryBuilder('q');
-                                           
-
-      return queryBuilder.getMany();
+        return queryBuilder.getMany();
   }
 
   async getColleges(options: IPaginationOptions, query) {

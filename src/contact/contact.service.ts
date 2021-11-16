@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { MailService } from "src/mail/mail.service";
+import { MailService } from "../mail/mail.service";
 import { MessageToAdminDto } from "./contact.dto";
 
 @Injectable()

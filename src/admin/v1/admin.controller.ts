@@ -1,9 +1,9 @@
 import { Body, ClassSerializerInterceptor, Controller, Get, Param, Post, Put, Req, UnauthorizedException, UseGuards, UseInterceptors } from "@nestjs/common";
 import { ApiOperation, ApiParam, ApiTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
-import { AuthService } from "src/auth/auth.service";
-import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
-import { LocalAuthGuard } from "src/auth/local-auth.guard";
+import { AuthService } from "../../auth/auth.service";
+import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
+import { LocalAuthGuard } from "../../auth/local-auth.guard";
 import { AdminService } from "../admin.service";
 import { AdminDto } from "../dto/admin.dto";
 import { AdminCreateDto } from "../dto/adminCreate.dto";

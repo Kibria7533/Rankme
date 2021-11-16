@@ -5,7 +5,9 @@ describe('RankRecordService', () => {
   let service: RankRecordService;
 
   beforeEach(async () => {
-    let MockRankRecord={}
+    let MockRankRecord={
+      handleCron:()=>Promise.resolve({})
+    }
     const module: TestingModule = await Test.createTestingModule({
       providers: [RankRecordService,{
         provide:RankRecordService,
@@ -19,4 +21,13 @@ describe('RankRecordService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  describe('handleCron', () => {
+    it('should update rank', async () => {
+      await expect(service.handleCron()).resolves.toEqual({});
+    });
+  });
+
+  
+  
 });
